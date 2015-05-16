@@ -6,10 +6,10 @@ public class TestLoan{
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Please enter the loan amount :");
-		double loanAmount = input.nextDouble();
-		
 		try{
+			System.out.println("Please enter the loan amount :");
+			double loanAmount = input.nextDouble();
+		
 			loan.setLoanAmount(loanAmount);
 		}
 		catch(IllegalArgumentException ex1){
@@ -17,10 +17,10 @@ public class TestLoan{
 			System.exit(1);
 		}
 		
-		System.out.println("Please enter the annual interest rate :");
-		double annualInterestRate = input.nextDouble();
-		
 		try{
+			System.out.println("Please enter the annual interest rate :");
+			double annualInterestRate = input.nextDouble();
+			
 			loan.setAnnualInterestRate(annualInterestRate);
 		}
 		catch(IllegalArgumentException ex2){
@@ -28,10 +28,10 @@ public class TestLoan{
 			System.exit(1);
 		}
 		
-		System.out.println("Please enter the number of years :");
-		int numberOfYears = input.nextInt();
-		
 		try{
+			System.out.println("Please enter the number of years :");
+			int numberOfYears = input.nextInt();
+		
 			loan.setNumberOfYears(numberOfYears);
 		}
 		catch(IllegalArgumentException ex3){
