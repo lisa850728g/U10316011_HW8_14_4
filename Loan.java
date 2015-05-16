@@ -1,17 +1,19 @@
-public class Loan{
+import java.util.*;
+
+class Loan{
 	private double annualInterestRate;
 	private int numberOfYears;
 	private double loanAmount;
-	private java.util.Date;
+	private java.util.Date loanDate;
 	
 	public Loan(){
 		this(2.5 , 1 , 1000);
 	}
 	
 	public Loan(double annualInterestRate , int numberOfYears , double loanAmount){
-		this.annualInterestRate = annualInterestRate;
-		this.numberOfYears = numberOfYears;
-		this.loanAmount = loanAmount;
+		setAnnualInterestRate(annualInterestRate);
+		setNumberOfYears(numberOfYears);
+		setLoanAmount(loanAmount);
 		loanDate = new java.util.Date();
 	}
 	
@@ -19,24 +21,33 @@ public class Loan{
 		return annualInterestRate;
 	}
 	
-	public void setAnnualInterestRate(){
-		this.annualInterestRate = annualInterestRate;
+	public void setAnnualInterestRate(double annualInterestRate) throws IllegalArgumentException{
+		if(annualInterestRate > 0)
+			this.annualInterestRate = annualInterestRate;
+		else 
+			throw new IllegalArgumentException("\nAnnual Interest Rate can't not be less than or equal to zero");
 	}
 	
 	public int getNumberOfYears(){
 		return numberOfYears;
 	}
 	
-	public void setNumberOfYears(){
-		this.numberOfYears = numberOfYears;
+	public void setNumberOfYears(int numberOfYears) throws IllegalArgumentException{
+		if(numberOfYears > 0)
+			this.numberOfYears = numberOfYears;
+		else
+			throw new IllegalArgumentException("\nNumber of years can't not be less than or equal to zero");
 	}
 	
 	public double getLoanAmount(){
 		return loanAmount;
 	}
 	
-	public void setLoanAmount(){
-		this.loanAmount = loanAmount;
+	public void setLoanAmount(double loanAmount) throws IllegalArgumentException{
+		if(loanAmount > 0)
+			this.loanAmount = loanAmount;
+		else
+			throw new IllegalArgumentException("\nLoan amount can't not be less than or equal to zero");
 	}
 	
 	public double getMonthlyPayment(){
