@@ -12,8 +12,8 @@ public class TestLoan{
 		
 			loan.setLoanAmount(loanAmount);
 		}
-		catch(IllegalArgumentException ex1){
-			System.out.println(ex1);
+		catch(IllegalArgumentException exLoanAmount){
+			System.out.println(exLoanAmount);
 			System.exit(1);
 		}
 		
@@ -23,8 +23,8 @@ public class TestLoan{
 			
 			loan.setAnnualInterestRate(annualInterestRate);
 		}
-		catch(IllegalArgumentException ex2){
-			System.out.println(ex2);
+		catch(IllegalArgumentException exAnnualInterestRate){
+			System.out.println(exAnnualInterestRate);
 			System.exit(1);
 		}
 		
@@ -34,8 +34,8 @@ public class TestLoan{
 		
 			loan.setNumberOfYears(numberOfYears);
 		}
-		catch(IllegalArgumentException ex3){
-			System.out.println(ex3);
+		catch(IllegalArgumentException exNumberOfYears){
+			System.out.println(exNumberOfYears);
 			System.exit(1);
 		}
 		
